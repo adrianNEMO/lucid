@@ -26,6 +26,9 @@ declare module '@adonisjs/core/types' {
   }
   export interface EventsList {
     'db:query': DbQueryEventNode
+    'db:connection:connect': ConnectionContract
+    'db:connection:disconnect': ConnectionContract
+    'db:connection:error': [Error, ConnectionContract]
   }
 }
 
